@@ -1,0 +1,8 @@
+node_modules/
+.wrangler/
+.dev.vars
+backups/
+links/
+setup-code.txt
+*.log
+.DS_Store

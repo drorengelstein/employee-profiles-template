@@ -1,0 +1,24 @@
+/* ===== טופס העובד — מותאם קודם כול לנייד ===== */
+.fwrap { max-width: 680px; margin: 0 auto; padding: 24px 16px 120px; }
+.center { text-align: center; }
+.hello { padding: 2rem 1.25rem; }
+.hello h1 { font-size: 1.7rem; }
+.hello .btn { margin-top: 1rem; min-width: 180px; min-height: 48px; font-size: 1.05rem; }
+.progress { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 12px 0 10px; margin-bottom: .5rem; }
+.progress-top { display: flex; justify-content: space-between; font-size: .875rem; color: var(--text-2); margin-bottom: .4rem; }
+.bar { height: 6px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--accent); border-radius: 99px; transition: width .25s; }
+.sec-desc { color: var(--text-2); margin-top: -.25rem; margin-bottom: 1.25rem; }
+.nav {
+  position: fixed; bottom: 0; inset-inline: 0; background: var(--surface); border-top: 1px solid var(--border);
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+}
+.nav-in { max-width: 680px; margin: 0 auto; display: flex; gap: .75rem; align-items: center; }
+.nav .btn { min-height: 48px; flex: 1; }
+.nav .btn.primary { flex: 2; }
+.saved { font-size: .8rem; color: var(--text-3); text-align: center; margin-top: .25rem; min-height: 1.2em; }
+.review dt { font-weight: 600; margin-top: .75rem; }
+.review dd { margin: .1rem 0 0; color: var(--text-2); white-space: pre-wrap; }
+.review h3 { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.review h3:first-child { border-top: 0; padding-top: 0; margin-top: 0; }
+.done-mark { width: 64px; height: 64px; border-radius: 50%; background: var(--good-soft); color: var(--good); display: grid; place-items: center; margin: 0 auto 1rem; font-size: 2rem; }

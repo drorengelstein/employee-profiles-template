@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>שאלון פרטים אישיים — ניהול</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="admin.css">
+<script src="common.js" defer></script>
+<script src="admin.js" defer></script>
+</head>
+<body>
+<div id="auth" class="auth hidden"></div>
+<div id="shell" class="hidden">
+  <header class="topbar no-print">
+    <div class="topbar-in">
+      <div class="brand">שאלון פרטים אישיים</div>
+      <nav class="tabs" id="tabs" aria-label="ניווט ראשי"></nav>
+      <div class="me"><span class="who" id="who"></span><button class="btn sm ghost" id="logout">יציאה</button></div>
+    </div>
+  </header>
+  <main class="page" id="view"></main>
+</div>
+</body>
+</html>

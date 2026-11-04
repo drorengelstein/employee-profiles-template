@@ -1,0 +1,70 @@
+/* ===== משובים — מסך המשתתף. בנוי קודם כול לנייד, להקלדה מהירה ===== */
+.lw { max-width: 720px; margin: 0 auto; padding: 16px 16px 48px; }
+.center { text-align: center; }
+.l-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
+.l-title { font-size: 1.45rem; margin: 0; line-height: 1.25; }
+.l-who { font-size: .85rem; color: var(--text-2); white-space: nowrap; display: flex; align-items: center; gap: .25rem; }
+.l-login h1 { font-size: 1.4rem; }
+.l-login .btn { width: 100%; min-height: 48px; font-size: 1.05rem; }
+
+/* מסך בית: שני כפתורים גדולים */
+.l-home { display: grid; gap: 1rem; margin-top: 1.5rem; }
+.l-big {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .3rem;
+  min-height: 150px; border-radius: 20px; font-size: 1.6rem; font-weight: 700; cursor: pointer;
+  border: 2px solid var(--accent); background: var(--surface); color: var(--accent-ink);
+  box-shadow: var(--shadow);
+}
+.l-big.primary { background: var(--accent); color: var(--on-accent); }
+.l-big small { font-size: .9rem; font-weight: 500; opacity: .85; }
+.l-big:active { transform: scale(.98); }
+
+/* ניווט בין המסכים */
+.l-nav { display: flex; gap: .5rem; margin-bottom: 1rem; }
+.l-nav .btn { flex: 1; min-height: 44px; }
+.l-nav .btn.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-ink); }
+
+/* טופס הערה חדשה */
+.l-form { display: grid; gap: .9rem; }
+.l-form select { min-height: 52px; font-size: 1.05rem; }
+.l-form textarea { min-height: 38vh; font-size: 1.05rem; line-height: 1.6; resize: none; overflow: hidden; }
+.l-send { min-height: 54px; font-size: 1.15rem; width: 100%; }
+.l-closed { text-align: center; }
+
+/* בועות: עיגולים עם מסגרת בצבע הקטגוריה ושוליים זוהרים */
+.bubbles { display: grid; grid-template-columns: repeat(auto-fill, minmax(138px, 1fr)); gap: 1.1rem; padding: .5rem .25rem 1rem; }
+.bubble {
+  position: relative; aspect-ratio: 1; border-radius: 50%; cursor: pointer; padding: 12%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: .2rem;
+  background: var(--surface); color: var(--text); font: inherit;
+  border: 4px solid var(--cat, var(--accent));
+  box-shadow: 0 0 18px 2px color-mix(in srgb, var(--cat, var(--accent)) 55%, transparent),
+              inset 0 0 14px color-mix(in srgb, var(--cat, var(--accent)) 22%, transparent);
+  transition: transform .12s, box-shadow .12s;
+}
+.bubble:hover { box-shadow: 0 0 26px 5px color-mix(in srgb, var(--cat, var(--accent)) 65%, transparent),
+                            inset 0 0 14px color-mix(in srgb, var(--cat, var(--accent)) 22%, transparent); }
+.bubble:active { transform: scale(.96); }
+.bubble:focus-visible { outline: 3px solid var(--cat); outline-offset: 4px; }
+.bubble .b-main { font-weight: 700; font-size: 1rem; line-height: 1.2; }
+.bubble .b-count {
+  position: absolute; top: 4%; inset-inline-end: 4%; min-width: 28px; height: 28px; padding: 0 .4rem;
+  border-radius: 99px; background: var(--cat); color: #fff; font-size: .85rem; font-weight: 700;
+  display: grid; place-items: center;
+}
+.bubble .b-snip {
+  font-size: .72rem; color: var(--text-2); line-height: 1.25; overflow: hidden;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; max-width: 100%;
+}
+.bubble .b-date { font-size: .66rem; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.l-cat-head { display: flex; align-items: center; gap: .6rem; margin-bottom: .5rem; }
+.l-cat-head h2 { margin: 0; }
+.l-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--cat); box-shadow: 0 0 8px var(--cat); }
+
+/* חלון הערה */
+.l-note-meta { display: flex; gap: .4rem; flex-wrap: wrap; align-items: center; margin-bottom: .75rem; }
+.l-chip { display: inline-block; padding: .15rem .6rem; border-radius: 99px; font-size: .82rem; font-weight: 600;
+  border: 2px solid var(--cat); color: var(--text); }
+.l-note-text { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.65; font-size: 1.02rem; }
+.l-edit-grid { display: grid; gap: .6rem; }
+.l-edit-grid textarea { min-height: 220px; }
